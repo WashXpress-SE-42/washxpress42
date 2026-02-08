@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+
+:root {
+    --background: #0f172a;
+    --foreground: #ffffff;
+    --primary: #0ea5e9;
+    --background-dark: #0f172a;
+    --surface-dark: #1e293b;
+    --border-dark: #334155;
+    --text-secondary: #94a3b8;
+}
+
+@theme {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--primary);
+    --color-background-dark: var(--background-dark);
+    --color-surface-dark: var(--surface-dark);
+    --color-border-dark: var(--border-dark);
+    --color-text-secondary: var(--text-secondary);
+    --font-display: "Manrope", sans-serif;
+    --radius: 1rem;
+    --radius-lg: 2rem;
+    --radius-xl: 3rem;
+}
+
+body {
+    background: var(--background-dark);
+    color: var(--foreground);
+    font-family: "Manrope", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-back {
+    background-image: url("/carwash2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Service Cards */
+.service-display-card {
+    height: 350px;
+    width: 400px;
+    padding: 15px;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-dark);
+}
+
+.card-one {
+    color: white;
+    background-image: url("/exterior.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card-two {
+    color: white;
+    background-image: url("/interior.avif");
+    background-position: center;
+    background-size: cover;
+}
+
+.card-three {
+    color: white;
+    background-image: url("/full.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card-one::after,
+.card-two::after,
+.card-three::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent);
+    transition: background-color 0.3s ease;
+    border-radius: 2rem;
+}
+
+.card-one:hover::after,
+.card-two:hover::after,
+.card-three:hover::after {
+    background: linear-gradient(to top, rgba(14, 165, 233, 0.3), transparent);
+}
+
+.card-one:hover,
+.card-two:hover,
+.card-three:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+}
+
+/* Subscription Cards */
+.sub-display-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid var(--border-dark);
+}
+
+.sub-display-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+    border-color: var(--primary);
+}
