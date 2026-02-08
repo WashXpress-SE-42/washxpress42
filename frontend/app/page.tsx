@@ -11,8 +11,6 @@ export default function Home() {
   const [displayedText, setDisplayedText] = useState("");
   const [displayedHighlight, setDisplayedHighlight] = useState("");
   const [isTypingMain, setIsTypingMain] = useState(true);
-  const [showCursor, setShowCursor] = useState(true);
-  const [typingComplete, setTypingComplete] = useState(false);
 
   useEffect(() => {
     if (isTypingMain) {
@@ -30,19 +28,9 @@ export default function Home() {
           setDisplayedHighlight(highlightText.slice(0, displayedHighlight.length + 1));
         }, 80);
         return () => clearTimeout(timeout);
-      } else {
-        setTimeout(() => setTypingComplete(true), 500);
       }
     }
   }, [displayedText, displayedHighlight, isTypingMain]);
-
-  useEffect(() => {
-    if (typingComplete) return;
-    const interval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 530);
-    return () => clearInterval(interval);
-  }, [typingComplete]);
 
   return (
     <div className="min-h-screen bg-[#0f172a] text-white">
@@ -57,7 +45,6 @@ export default function Home() {
                 <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl md:leading-[1.1] min-h-[2.4em]">
                   {displayedText}
                   <span className="text-[#0ea5e9]">{displayedHighlight}</span>
-                  {!typingComplete && <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-[#0ea5e9] transition-opacity`}>|</span>}
                 </h1>
                 <h2 className="text-[#94a3b8] text-base font-normal leading-relaxed max-w-md">
                   Sri Lanka's first smart subscription-based car wash service. Eco-friendly, on-demand, and convenient.
