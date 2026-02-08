@@ -69,7 +69,7 @@ const Footer = () => {
           
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[#94a3b8] text-xs">
-              © {new Date().getFullYear()} WashXpress. All rights reserved.
+              © {new Date().getFullYear()} WashXpress. ll rights reserved.
             </p>
             <p className="text-[#94a3b8] text-xs">Designed for car lovers in Sri Lanka.</p>
           </div>
