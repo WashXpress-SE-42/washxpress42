@@ -1,8 +1,47 @@
+"use client";
+
 import Footer from "./footer";
 import NavBar from "./navBar";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const fullText = "Showroom Shine, ";
+  const highlightText = "Right in Your Driveway.";
+  const [displayedText, setDisplayedText] = useState("");
+  const [displayedHighlight, setDisplayedHighlight] = useState("");
+  const [isTypingMain, setIsTypingMain] = useState(true);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    if (isTypingMain) {
+      if (displayedText.length < fullText.length) {
+        const timeout = setTimeout(() => {
+          setDisplayedText(fullText.slice(0, displayedText.length + 1));
+        }, 80);
+        return () => clearTimeout(timeout);
+      } else {
+        setIsTypingMain(false);
+      }
+    } else {
+      if (displayedHighlight.length < highlightText.length) {
+        const timeout = setTimeout(() => {
+          setDisplayedHighlight(highlightText.slice(0, displayedHighlight.length + 1));
+        }, 80);
+        return () => clearTimeout(timeout);
+      } else {
+        setTimeout(() => setShowCursor(false), 1000);
+      }
+    }
+  }, [displayedText, displayedHighlight, isTypingMain]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 530);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0f172a] text-white">
       <NavBar />
@@ -13,8 +52,10 @@ export default function Home() {
           <div className="flex flex-col gap-6 py-10 md:gap-8 md:flex-row items-center">
             <div className="flex flex-col gap-6 md:min-w-[400px] md:gap-8 order-2 md:order-1 flex-1">
               <div className="flex flex-col gap-4 text-left">
-                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl md:leading-[1.1]">
-                  Showroom Shine, <span className="text-[#0ea5e9]">Right in Your Driveway.</span>
+                <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl md:leading-[1.1] min-h-[2.4em]">
+                  {displayedText}
+                  <span className="text-[#0ea5e9]">{displayedHighlight}</span>
+                  <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-[#0ea5e9] transition-opacity`}>|</span>
                 </h1>
                 <h2 className="text-[#94a3b8] text-base font-normal leading-relaxed max-w-md">
                   Sri Lanka's first smart subscription-based car wash service. Eco-friendly, on-demand, and convenient.
