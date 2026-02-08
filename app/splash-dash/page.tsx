@@ -1,11 +1,46 @@
-import Link from "next/link";
+"use client";
 
-export const metadata = {
-  title: "Splash & Dash",
-  description: "Showroom shine, right in your driveway.",
-};
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function SplashDashPage() {
+  const fullText = "Showroom Shine, ";
+  const highlightText = "Right in Your Driveway.";
+  const [displayedText, setDisplayedText] = useState("");
+  const [displayedHighlight, setDisplayedHighlight] = useState("");
+  const [isTypingMain, setIsTypingMain] = useState(true);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    if (isTypingMain) {
+      if (displayedText.length < fullText.length) {
+        const timeout = setTimeout(() => {
+          setDisplayedText(fullText.slice(0, displayedText.length + 1));
+        }, 80);
+        return () => clearTimeout(timeout);
+      } else {
+        setIsTypingMain(false);
+      }
+    } else {
+      if (displayedHighlight.length < highlightText.length) {
+        const timeout = setTimeout(() => {
+          setDisplayedHighlight(highlightText.slice(0, displayedHighlight.length + 1));
+        }, 80);
+        return () => clearTimeout(timeout);
+      } else {
+        // Stop cursor blinking after typing is done
+        setTimeout(() => setShowCursor(false), 1000);
+      }
+    }
+  }, [displayedText, displayedHighlight, isTypingMain]);
+
+  // Cursor blink effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 530);
+    return () => clearInterval(interval);
+  }, []);
   // This page is a React/Next.js version of the HTML you shared.
   // It uses project Tailwind (not CDN) and a small Tailwind config extension (see tailwind.config.js).
   return (
@@ -70,8 +105,10 @@ export default function SplashDashPage() {
               <div className="flex flex-col gap-6 py-10 md:gap-8 md:flex-row items-center">
                 <div className="flex flex-col gap-6 md:min-w-[400px] md:gap-8 order-2 md:order-1 flex-1">
                   <div className="flex flex-col gap-4 text-left">
-                    <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] md:leading-[1.1]">
-                      Showroom Shine, <span className="text-primary">Right in Your Driveway.</span>
+                    <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] md:leading-[1.1] min-h-[2.4em]">
+                      {displayedText}
+                      <span className="text-primary">{displayedHighlight}</span>
+                      <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-primary transition-opacity`}>|</span>
                     </h1>
                     <h2 className="text-text-secondary text-base font-normal leading-relaxed max-w-md">
                       The mobile car wash subscription that saves you time and keeps your ride pristine.
