@@ -113,7 +113,7 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
               {/* Basic Plan */}
-              <div className="sub-display-card w-full max-w-[300px] h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
+              <div className="sub-display-card w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
                 <div>
                   <h3 className="text-white font-bold text-2xl mb-6">Basic Plan</h3>
                   <div className="space-y-4 text-[#94a3b8]">
@@ -140,7 +140,7 @@ export default function Home() {
               </div>
 
               {/* Premium Plan - Featured */}
-              <div className="sub-display-card w-full max-w-[300px] h-[500px] bg-gradient-to-br from-[#0ea5e9]/20 to-[#1e293b] border-2 border-[#0ea5e9] rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
+              <div className="sub-display-card w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-gradient-to-br from-[#0ea5e9]/20 to-[#1e293b] border-2 border-[#0ea5e9] rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
                 <div className="absolute top-4 right-4 bg-[#0ea5e9] text-[#0f172a] px-3 py-1 rounded-full text-xs font-bold">
                   POPULAR
                 </div>
@@ -174,7 +174,7 @@ export default function Home() {
               </div>
 
               {/* Elite Plan */}
-              <div className="sub-display-card w-full max-w-[300px] h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
+              <div className="sub-display-card w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
                 <div>
                   <h3 className="text-white font-bold text-2xl mb-6">Elite Plan</h3>
                   <div className="space-y-4 text-[#94a3b8]">
