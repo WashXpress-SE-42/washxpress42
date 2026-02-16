@@ -3,6 +3,7 @@
 import Footer from "./footer";
 import NavBar from "./navBar";
 import Link from "next/link";
+import HowItWorks from "./HowItWorks";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -130,41 +131,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-12 bg-[#1e293b]/30">
-        <div className="flex justify-center px-4 md:px-10">
-          <div className="flex flex-col max-w-[1200px] flex-1">
-            <h2 className="text-white text-3xl font-black mb-12 text-center">
-              HOW IT WORKS
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-[#0ea5e9] flex items-center justify-center text-[#0f172a] font-black text-2xl">
-                  1
-                </div>
-                <h3 className="text-white font-bold text-lg">Choose Your Plan</h3>
-                <p className="text-[#94a3b8] text-sm">Select a subscription plan that fits your needs and budget.</p>
-              </div>
-              
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-[#0ea5e9] flex items-center justify-center text-[#0f172a] font-black text-2xl">
-                  2
-                </div>
-                <h3 className="text-white font-bold text-lg">Schedule Your Wash</h3>
-                <p className="text-[#94a3b8] text-sm">Book a convenient time through our app or website.</p>
-              </div>
-              
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-[#0ea5e9] flex items-center justify-center text-[#0f172a] font-black text-2xl">
-                  3
-                </div>
-                <h3 className="text-white font-bold text-lg">Relax & Enjoy</h3>
-                <p className="text-[#94a3b8] text-sm">Our team arrives and makes your car shine while you focus on your day.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorks />
 
       {/* Subscription Plans */}
       <section id="subscription-plan" className="py-12">
