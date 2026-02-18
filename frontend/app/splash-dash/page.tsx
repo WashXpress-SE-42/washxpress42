@@ -463,7 +463,9 @@ export default function SplashDashPage() {
                       </a>
                       <a
                         className="w-8 h-8 rounded-full bg-surface-dark flex items-center justify-center text-text-secondary hover:bg-primary hover:text-background-dark transition-all"
-                        href="#"
+                        href="https://www.instagram.com/washxpress_lk?igsh=MTE3MGZxOXR1N2k3cA=="
+                        target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="Instagram"
                       >
                         <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
