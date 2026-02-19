@@ -48,7 +48,7 @@ export default function Home() {
                   <span className="text-[#0ea5e9]">{displayedHighlight}</span>
                 </h1>
                 <h2 className="text-[#94a3b8] text-base font-normal leading-relaxed max-w-md">
-                  Sri Lanka's first smart subscription-based car wash service. Eco-friendly, on-demand, and convenient.
+                  Sri Lanka's first smart subscription-based car wash service.
                 </h2>
               </div>
               

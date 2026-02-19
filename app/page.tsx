@@ -18,7 +18,7 @@ export default function Home() {
                   Showroom Shine, <span className="text-[#0ea5e9]">Right in Your Driveway.</span>
                 </h1>
                 <h2 className="text-[#94a3b8] text-base font-normal leading-relaxed max-w-md">
-                  Sri Lanka's first smart subscription-based car wash service. Eco-friendly, on-demand, and convenient.
+                  Sri Lanka's first smart subscription-based car wash service.
                 </h2>
               </div>
               
@@ -50,7 +50,6 @@ export default function Home() {
                     +500
                   </div>
                 </div>
-                <p className="text-sm text-[#94a3b8]">Trusted by 500+ car owners in Sri Lanka</p>
               </div>
             </div>
             
