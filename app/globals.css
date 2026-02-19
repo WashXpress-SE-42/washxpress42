@@ -117,6 +117,31 @@ html {
     border-color: var(--primary);
 }
 
+.brand-animated {
+    background: linear-gradient(120deg, #00b8ff, #00a0e0, #7fa0b8, #00b8ff);
+    background-size: 300% 300%;
+    animation: brandShift 6s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes brandShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.popular-highlight {
+    animation: popularGlow 3s ease-in-out infinite;
+}
+
+@keyframes popularGlow {
+    0% { box-shadow: 0 0 0 rgba(14, 165, 233, 0.0), 0 0 0 rgba(14, 165, 233, 0.0); }
+    50% { box-shadow: 0 0 25px rgba(14, 165, 233, 0.35), 0 0 55px rgba(14, 165, 233, 0.25); }
+    100% { box-shadow: 0 0 0 rgba(14, 165, 233, 0.0), 0 0 0 rgba(14, 165, 233, 0.0); }
+}
+
 @media (min-width: 768px) {
     .service-display-card {
         height: 350px;
