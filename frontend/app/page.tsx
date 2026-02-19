@@ -133,6 +133,22 @@ export default function Home() {
       {/* How It Works Section */}
       <HowItWorks />
 
+      {/* Why Choose Section */}
+      <section className="py-12">
+        <div className="flex justify-center px-4 md:px-10">
+          <div className="flex flex-col max-w-[900px] flex-1 items-center text-center gap-4">
+            <h2 className="text-4xl md:text-5xl font-black flex flex-wrap justify-center gap-2">
+              <span className="text-white">Why Choose</span>
+              <span className="brand-animated">WashXpress</span>
+              <span className="text-white">?</span>
+            </h2>
+            <p className="text-[#94a3b8] text-base leading-relaxed">
+              <strong className="text-white">Tired of wasting time in long car wash queues?</strong> With WashXpress, you can wash your car right at home! Sri Lanka's first smart subscription-based car wash service offers flexible plans and professional care - bringing a fast, convenient, and premium car wash experience to your doorstep.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Subscription Plans */}
       <section id="subscription-plan" className="py-12">
         <div className="flex justify-center px-4 md:px-10">
@@ -170,7 +186,7 @@ export default function Home() {
               </div>
 
               {/* Premium Plan - Featured */}
-              <div className="sub-display-card w-full max-w-[300px] h-[500px] bg-gradient-to-br from-[#0ea5e9]/20 to-[#1e293b] border-2 border-[#0ea5e9] rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
+              <div className="sub-display-card popular-highlight w-full max-w-[300px] h-[500px] bg-gradient-to-br from-[#0ea5e9]/20 to-[#1e293b] border-2 border-[#0ea5e9] rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
                 <div className="absolute top-4 right-4 bg-[#0ea5e9] text-[#0f172a] px-3 py-1 rounded-full text-xs font-bold">
                   POPULAR
                 </div>
