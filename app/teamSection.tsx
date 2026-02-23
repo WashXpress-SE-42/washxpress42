@@ -9,7 +9,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="team-scroll-container" style={{ height: "400vh" }}>
+    <section id="team" className="team-scroll-container">
       <div className="sticky top-0 h-screen flex flex-col justify-center items-center overflow-hidden">
         <div className="flex justify-center px-4 md:px-10 w-full">
           <div className="flex flex-col max-w-[1200px] flex-1">
@@ -28,7 +28,7 @@ export default function TeamSection() {
             </div>
 
             {/* Scrolling Cards */}
-            <div className="relative h-[420px] w-full overflow-hidden team-mask">
+            <div className="relative w-full max-h-[420px] overflow-y-auto team-mask">
               <div className="flex flex-col items-center gap-10 py-10 team-scroll-inner">
                 {teamMembers.map((member, i) => (
                   <div
