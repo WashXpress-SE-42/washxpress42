@@ -1,5 +1,3 @@
-// ...existing code...
-// This is a placeholder for the team section. Replace with your actual implementation.
 const teamMembers = [
   { name: "Lahiru Indrajith", role: "Full-Stack Developer" },
   { name: "Nidula Ekanayake", role: "UI/UX Designer" },
@@ -15,6 +13,7 @@ export default function TeamSection() {
       <div className="sticky top-0 h-screen flex flex-col justify-center items-center overflow-hidden">
         <div className="flex justify-center px-4 md:px-10 w-full">
           <div className="flex flex-col max-w-[1200px] flex-1">
+
             {/* Header */}
             <div className="text-center mb-12">
               <span className="text-[#0ea5e9] font-bold tracking-wider text-sm uppercase">
@@ -27,6 +26,7 @@ export default function TeamSection() {
                 The passionate people behind your vehicle&apos;s showroom shine.
               </p>
             </div>
+
             {/* Scrolling Cards */}
             <div className="relative w-full max-h-[420px] overflow-y-auto team-mask">
               <div className="flex flex-col items-center gap-10 py-10 team-scroll-inner">
@@ -47,6 +47,7 @@ export default function TeamSection() {
                 ))}
               </div>
             </div>
+
           </div>
         </div>
       </div>
