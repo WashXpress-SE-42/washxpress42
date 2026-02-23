@@ -235,7 +235,7 @@ export default function LocationSearch() {
             <p className="text-[#94a3b8] text-xs mt-0.5 leading-relaxed">
               We&apos;re expanding fast across Sri Lanka. Be the first to know when WashXpress arrives in your district.
             </p>
-            <button className="mt-2 text-xs font-bold text-[#0ea5e9] hover:text-[#38bdf8] flex items-center gap-1 transition-colors">
+            <button className="mt-2  text-xs font-bold text-[#0ea5e9] hover:text-[#38bdf8] flex items-center gap-1 transition-colors">
               Notify me when available
               <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
             </button>
