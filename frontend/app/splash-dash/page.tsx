@@ -1,14 +1,7 @@
 "use client";
 
-<<<<<<< HEAD
-export const metadata = {
-  title: "WashXpress",
-  description: "Showroom shine, right in your driveway.",
-};
-=======
 import Link from "next/link";
 import { useState, useEffect } from "react";
->>>>>>> origin/main
 
 export default function SplashDashPage() {
   const fullText = "Showroom Shine, ";

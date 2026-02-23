@@ -1,0 +1,80 @@
+"use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function NavBar() {
+  const pathname = usePathname();
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+  
+  return (
+    <nav className="w-full border-b border-[#334155] bg-[#0f172a]/95 backdrop-blur-sm sticky top-0 z-50">
+      <div className="px-4 md:px-10 py-3 max-w-[1200px] mx-auto">
+        <header className="flex items-center justify-between whitespace-nowrap">
+          <div className="flex items-center gap-4 text-white">
+            <div className="size-8 text-[#0ea5e9] flex items-center justify-center">
+              <span className="material-symbols-outlined text-[32px]">local_car_wash</span>
+            </div>
+            <h2 className="text-white text-lg font-bold leading-tight tracking-[-0.015em]">WashXpress</h2>
+          </div>
+          
+          <div className="hidden md:flex flex-1 justify-end gap-8">
+            <div className="flex items-center gap-9">
+              <Link
+                href="/"
+                className="text-white text-sm font-medium leading-normal hover:text-[#0ea5e9] transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                href="/#services"
+                className="text-white text-sm font-medium leading-normal hover:text-[#0ea5e9] transition-colors"
+                onClick={(e) => handleScroll(e, "services")}
+              >
+                Services
+              </Link>
+              <Link
+                href="/#about"
+                className="text-white text-sm font-medium leading-normal hover:text-[#0ea5e9] transition-colors"
+                onClick={(e) => handleScroll(e, "about")}
+              >
+                About
+              </Link>
+              <Link
+                href="/#subscription-plan"
+                className="text-white text-sm font-medium leading-normal hover:text-[#0ea5e9] transition-colors"
+                onClick={(e) => handleScroll(e, "subscription-plan")}
+              >
+                Pricing
+              </Link>
+            </div>
+            <div className="flex gap-2">
+              <Link href="/contact">
+                <button className="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[#334155] hover:bg-slate-600 text-white text-sm font-bold transition-all">
+                  <span className="truncate">Contact</span>
+                </button>
+              </Link>
+              <Link href="/#subscription-plan" onClick={(e) => handleScroll(e, "subscription-plan")}>
+                <button className="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[#0ea5e9] hover:bg-[#0284c7] text-[#0f172a] text-sm font-bold transition-all shadow-[0_0_15px_rgba(14,165,233,0.3)]">
+                  <span className="truncate">Get Started</span>
+                </button>
+              </Link>
+            </div>
+          </div>
+          
+          <button className="md:hidden text-white">
+            <span className="material-symbols-outlined">menu</span>
+          </button>
+        </header>
+      </div>
+    </nav>
+  );
+}
