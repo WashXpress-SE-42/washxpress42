@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+export const metadata = {
+  title: "WashXpress",
+  description: "Showroom shine, right in your driveway.",
+};
 
 export default function SplashDashPage() {
   const fullText = "Showroom Shine, ";
