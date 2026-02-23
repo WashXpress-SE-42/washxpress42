@@ -26,12 +26,12 @@ export default function NavBar() {
         <header className="flex items-center justify-between whitespace-nowrap">
           <Link href="/">
             <Image
-              src="/WashXpress_logo.svg"
+              src="/full.avif"
               alt="WashXpress"
-              width={200}
+              width={50}
               height={50}
               priority
-              className="h-9 w-auto"
+              className="h-9 w-auto rounded"
             />
           </Link>
 
