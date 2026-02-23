@@ -26,7 +26,6 @@ export default function Home() {
 
               {/* ── Location search with district dropdown ── */}
               <LocationSearch />
-
               <div className="flex gap-4 items-center mt-2">
                 <div className="flex -space-x-3">
                   <div className="size-8 rounded-full border-2 border-[#0f172a] bg-gray-500"></div>
@@ -166,5 +165,4 @@ export default function Home() {
       <Footer />
     </div>
   );
-
 }
