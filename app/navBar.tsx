@@ -19,11 +19,7 @@ export default function NavBar() {
     setMenuOpen(false);
   };
 
-<<<<<<< HEAD
-=======
   const closeMenu = () => setMenuOpen(false);
-  
->>>>>>> origin/main
   return (
     <nav className="w-full border-b border-[#334155] bg-[#0f172a]/95 backdrop-blur-sm sticky top-0 z-50">
       <div className="px-4 md:px-10 py-3 max-w-[1200px] mx-auto">
@@ -89,24 +85,16 @@ export default function NavBar() {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-
-          <button className="md:hidden text-white">
-            <span className="material-symbols-outlined">menu</span>
-=======
-          
           <button className="md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
             <span className="material-symbols-outlined">{menuOpen ? "close" : "menu"}</span>
->>>>>>> origin/main
           </button>
         </header>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          menuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="flex flex-col gap-4 px-6 pb-6 pt-2 border-t border-[#334155] bg-[#0f172a]/95 backdrop-blur-sm">
           <Link
