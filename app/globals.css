@@ -115,3 +115,25 @@ html {
     box-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
     border-color: var(--primary);
 }
+
+/* ── Team sticky-scroll section ── */
+.team-mask {
+    mask-image: linear-gradient(
+        to bottom,
+        transparent,
+        black 15%,
+        black 85%,
+        transparent
+    );
+}
+
+.team-scroll-inner {
+    animation: scroll-team linear;
+    animation-timeline: scroll(root);
+    animation-range: contain 10% contain 90%;
+}
+
+@keyframes scroll-team {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(-100%); }
+}

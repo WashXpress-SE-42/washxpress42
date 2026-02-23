@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Splash & Dash",
+  title: "WashXpress",
   description: "Showroom shine, right in your driveway.",
 };
 
