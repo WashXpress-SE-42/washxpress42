@@ -1,6 +1,6 @@
 const teamMembers = [
   { name: "Lahiru Indrajith", role: "Full-Stack Developer" },
-  { name: "Nidula Ekanayake", role: "UI/UX Designer" },
+  { name: "Nidula Ekanayake", role: "Full-Stack Develope" },
   { name: "Yasiru Anupama", role: "Full-Stack Developer" },
   { name: "Kavindu Banuja", role: "Front-end Developer" },
   { name: "Chathil Karunathilake", role: "Front-end Developer" },
