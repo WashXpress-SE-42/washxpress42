@@ -11,7 +11,7 @@ const SL_DISTRICTS = [
   "Polonnaruwa", "Puttalam", "Ratnapura", "Trincomalee", "Vavuniya",
 ];
 
-const AVAILABLE_DISTRICTS = ["Colombo"];
+const AVAILABLE_DISTRICTS = ["Colombo","Kandy"];
 
 type Status = "idle" | "available" | "unavailable";
 
