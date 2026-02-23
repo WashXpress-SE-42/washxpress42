@@ -1,7 +1,5 @@
 "use client";
-
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function NavBar() {
@@ -21,16 +19,12 @@ export default function NavBar() {
     <nav className="w-full border-b border-[#334155] bg-[#0f172a]/95 backdrop-blur-sm sticky top-0 z-50">
       <div className="px-4 md:px-10 py-3 max-w-[1200px] mx-auto">
         <header className="flex items-center justify-between whitespace-nowrap">
-          <Link href="/">
-            <Image
-              src="/WashXpress_logo.svg"
-              alt="WashXpress"
-              width={200}
-              height={50}
-              priority
-              className="h-9 w-auto"
-            />
-          </Link>
+          <div className="flex items-center gap-4 text-white">
+            <div className="size-8 text-[#0ea5e9] flex items-center justify-center">
+              <span className="material-symbols-outlined text-[32px]">local_car_wash</span>
+            </div>
+            <h2 className="text-white text-lg font-bold leading-tight tracking-[-0.015em]">WashXpress</h2>
+          </div>
           
           <div className="hidden md:flex flex-1 justify-end gap-8">
             <div className="flex items-center gap-9">
