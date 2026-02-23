@@ -1,8 +1,10 @@
 
 import Footer from "./footer";
 import NavBar from "./navBar";
-import Link from "next/link";
 import TeamSection from "./teamSection";
+import HowItWorks from "./popup";
+import LocationSearch from "./LocationSearch";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,26 +24,9 @@ export default function Home() {
                   Sri Lanka's first smart subscription-based car wash service.
                 </h2>
               </div>
-              
-              <label className="flex flex-col h-14 w-full max-w-[480px] md:h-16 shadow-lg shadow-black/20 rounded-xl">
-                <div className="flex w-full flex-1 items-stretch rounded-xl h-full border border-[#334155] focus-within:border-[#0ea5e9] transition-colors">
-                  <div className="text-[#94a3b8] flex bg-[#1e293b] items-center justify-center pl-4 rounded-l-xl">
-                    <span className="material-symbols-outlined">location_on</span>
-                  </div>
-                  <input 
-                    className="flex w-full min-w-0 flex-1 resize-none overflow-hidden text-white focus:outline-0 bg-[#1e293b] placeholder:text-[#94a3b8]/50 px-4 text-sm font-normal md:text-base" 
-                    placeholder="Enter your location in Sri Lanka" 
-                  />
-                  <div className="flex items-center justify-center rounded-r-xl bg-[#1e293b] pr-2">
-                    <Link href="#subscription-plan">
-                      <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 md:h-12 bg-[#0ea5e9] hover:bg-[#0284c7] text-[#0f172a] text-sm font-bold transition-all">
-                        <span className="truncate">Get Started</span>
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </label>
-              
+
+              {/* ── Location search with district dropdown ── */}
+              <LocationSearch />
               <div className="flex gap-4 items-center mt-2">
                 <div className="flex -space-x-3">
                   <div className="size-8 rounded-full border-2 border-[#0f172a] bg-gray-500"></div>
@@ -94,39 +79,22 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* How It Works Section */}
-      <section className="py-12 bg-[#1e293b]/30">
+      <HowItWorks />
+
+      {/* Why Choose Section */}
+      <section className="py-12">
         <div className="flex justify-center px-4 md:px-10">
-          <div className="flex flex-col max-w-[1200px] flex-1">
-            <h2 className="text-white text-3xl font-black mb-12 text-center">
-              HOW IT WORKS
+          <div className="flex flex-col max-w-[900px] flex-1 items-center text-center gap-4">
+            <h2 className="text-4xl md:text-5xl font-black flex flex-wrap justify-center gap-2">
+              <span className="text-white">Why Choose</span>
+              <span className="brand-animated">WashXpress</span>
+              <span className="text-white">?</span>
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-[#0ea5e9] flex items-center justify-center text-[#0f172a] font-black text-2xl">
-                  1
-                </div>
-                <h3 className="text-white font-bold text-lg">Choose Your Plan</h3>
-                <p className="text-[#94a3b8] text-sm">Select a subscription plan that fits your needs and budget.</p>
-              </div>
-              
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-[#0ea5e9] flex items-center justify-center text-[#0f172a] font-black text-2xl">
-                  2
-                </div>
-                <h3 className="text-white font-bold text-lg">Schedule Your Wash</h3>
-                <p className="text-[#94a3b8] text-sm">Book a convenient time through our app or website.</p>
-              </div>
-              
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-[#0ea5e9] flex items-center justify-center text-[#0f172a] font-black text-2xl">
-                  3
-                </div>
-                <h3 className="text-white font-bold text-lg">Relax & Enjoy</h3>
-                <p className="text-[#94a3b8] text-sm">Our team arrives and makes your car shine while you focus on your day.</p>
-              </div>
-            </div>
+            <p className="text-[#94a3b8] text-base leading-relaxed">
+              <strong className="text-white">Tired of wasting time in long car wash queues?</strong> With WashXpress, you can wash your car right at home! Sri Lanka’s first smart subscription-based car wash service offers flexible plans and professional care—bringing a fast, convenient, and premium car wash experience to your doorstep.
+            </p>
           </div>
         </div>
       </section>
@@ -138,7 +106,7 @@ export default function Home() {
             <h2 className="text-white text-3xl font-black mb-12 text-left">SUBSCRIPTION PLANS</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
               {/* Basic Plan */}
-              <div className="sub-display-card w-full max-w-[300px] h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
+              <div className="sub-display-card w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
                 <div>
                   <h3 className="text-white font-bold text-2xl mb-6">Basic Plan</h3>
                   <div className="space-y-4 text-[#94a3b8]">
@@ -154,7 +122,7 @@ export default function Home() {
               </div>
 
               {/* Premium Plan - Featured */}
-              <div className="sub-display-card w-full max-w-[300px] h-[500px] bg-gradient-to-br from-[#0ea5e9]/20 to-[#1e293b] border-2 border-[#0ea5e9] rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
+              <div className="sub-display-card popular-highlight w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-gradient-to-br from-[#0ea5e9]/20 to-[#1e293b] border-2 border-[#0ea5e9] rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
                 <div className="absolute top-4 right-4 bg-[#0ea5e9] text-[#0f172a] px-3 py-1 rounded-full text-xs font-bold">
                   POPULAR
                 </div>
@@ -173,7 +141,7 @@ export default function Home() {
               </div>
 
               {/* Elite Plan */}
-              <div className="sub-display-card w-full max-w-[300px] h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
+              <div className="sub-display-card w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
                 <div>
                   <h3 className="text-white font-bold text-2xl mb-6">Elite Plan</h3>
                   <div className="space-y-4 text-[#94a3b8]">
@@ -187,7 +155,6 @@ export default function Home() {
                   <button className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-[#0f172a] py-3 rounded-full font-bold transition-all shadow-[0_0_15px_rgba(14,165,233,0.3)]">Subscribe</button>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
