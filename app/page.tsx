@@ -1,6 +1,8 @@
+
 import Footer from "./footer";
 import NavBar from "./navBar";
 import Link from "next/link";
+import TeamSection from "./teamSection";
 
 export default function Home() {
   return (
