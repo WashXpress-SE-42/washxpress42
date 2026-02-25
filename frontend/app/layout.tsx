@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import NavBar from "./navBar";
+import Footer from "./footer";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -21,7 +23,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className={manrope.className}>{children}</body>
+      <body className={manrope.className}>
+        <div className="min-h-screen bg-[#0f172a] text-white flex flex-col">
+          <NavBar />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

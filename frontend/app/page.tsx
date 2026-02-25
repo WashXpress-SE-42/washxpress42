@@ -1,16 +1,22 @@
-
-import Footer from "./footer";
-import NavBar from "./navBar";
-import TeamSection from "./teamSection";
-import HowItWorks from "./popup";
-import LocationSearch from "./LocationSearch";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+import LocationSearch from "./LocationSearch";
+
+// ISR Setup: Revalidate the page every 3600 seconds (1 hour)
+export const revalidate = 3600;
+
+// Dynamically import heavy components that are below the fold
+const TeamSection = dynamic(() => import("./teamSection"), {
+  loading: () => <div className="py-20 text-center text-[#94a3b8]">Loading Team...</div>,
+});
+
+const HowItWorks = dynamic(() => import("./popup"), {
+  loading: () => <div className="py-20 text-center text-[#94a3b8]">Loading Instructions...</div>,
+});
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0f172a] text-white">
-      <NavBar />
-
+    <>
       {/* Hero Section */}
       <section className="flex justify-center py-5">
         <div className="flex flex-col max-w-[960px] flex-1 px-4 md:px-10">
@@ -162,8 +168,6 @@ export default function Home() {
 
       {/* Meet the Team */}
       <TeamSection />
-
-      <Footer />
-    </div>
+    </>
   );
 }
