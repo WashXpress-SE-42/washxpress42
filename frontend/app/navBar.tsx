@@ -2,11 +2,28 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  useEffect(() => {
+    const stored = typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+    const initial = stored === "light" ? "light" : "dark";
+    setTheme(initial);
+    document.documentElement.dataset.theme = initial;
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", theme);
+    }
+  }, [theme]);
+
+  const toggleTheme = () => setTheme((prev) => (prev === "dark" ? "light" : "dark"));
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     if (pathname === "/") {
@@ -72,7 +89,17 @@ export default function NavBar() {
                 Pricing
               </Link>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
+              <button
+                aria-label="Toggle color mode"
+                onClick={toggleTheme}
+                className="flex items-center gap-2 h-10 px-4 rounded-full border border-[#334155] text-white text-sm font-medium bg-transparent hover:bg-[#1e293b] transition-colors"
+              >
+                <span className="material-symbols-outlined text-base">
+                  {theme === "dark" ? "light_mode" : "dark_mode"}
+                </span>
+                <span className="hidden sm:inline">{theme === "dark" ? "Light" : "Dark"}</span>
+              </button>
               <Link href="/contact">
                 <button className="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[#334155] hover:bg-slate-600 text-white text-sm font-bold transition-all">
                   <span className="truncate">Contact</span>
@@ -125,6 +152,16 @@ export default function NavBar() {
           >
             Pricing
           </Link>
+          <button
+            aria-label="Toggle color mode"
+            onClick={toggleTheme}
+            className="flex items-center gap-2 h-10 px-4 rounded-full border border-[#334155] text-white text-sm font-medium bg-transparent hover:bg-[#1e293b] transition-colors"
+          >
+            <span className="material-symbols-outlined text-base">
+              {theme === "dark" ? "light_mode" : "dark_mode"}
+            </span>
+            <span>{theme === "dark" ? "Light" : "Dark"}</span>
+          </button>
           <div className="flex flex-col gap-3 pt-2">
             <Link href="/contact" onClick={closeMenu}>
               <button className="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[#334155] hover:bg-slate-600 text-white text-sm font-bold transition-all">
