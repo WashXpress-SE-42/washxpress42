@@ -27,17 +27,6 @@ export default function Home() {
 
               {/* ── Location search with district dropdown ── */}
               <LocationSearch />
-              <div className="flex gap-4 items-center mt-2">
-                <div className="flex -space-x-3">
-                  <div className="size-8 rounded-full border-2 border-[#0f172a] bg-gray-500"></div>
-                  <div className="size-8 rounded-full border-2 border-[#0f172a] bg-gray-400"></div>
-                  <div className="size-8 rounded-full border-2 border-[#0f172a] bg-gray-600"></div>
-                  <div className="size-8 rounded-full border-2 border-[#0f172a] bg-[#1e293b] flex items-center justify-center text-[10px] text-white font-bold">
-                    +500
-                  </div>
-                </div>
-                <p className="text-sm text-[#94a3b8]">Trusted by 500+ car owners in Sri Lanka</p>
-              </div>
             </div>
 
             <div className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-2xl md:h-auto md:min-w-[400px] md:w-full order-1 md:order-2 shadow-2xl border border-[#334155] relative overflow-hidden group hero-back">
@@ -116,18 +105,18 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-white text-3xl font-bold mb-4">LKR 2,500<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
+                  <p className="text-white text-3xl font-bold mb-4">LKR 5,500<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
                   <button className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-[#0f172a] py-3 rounded-full font-bold transition-all shadow-[0_0_15px_rgba(14,165,233,0.3)]">Subscribe</button>
                 </div>
               </div>
 
-              {/* Premium Plan - Featured */}
+              {/* Standard Plan - Featured */}
               <div className="sub-display-card popular-highlight w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-gradient-to-br from-[#0ea5e9]/20 to-[#1e293b] border-2 border-[#0ea5e9] rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
                 <div className="absolute top-4 right-4 bg-[#0ea5e9] text-[#0f172a] px-3 py-1 rounded-full text-xs font-bold">
                   POPULAR
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-2xl mb-6">Standard</h3>
+                  <h3 className="text-white font-bold text-2xl mb-6">Standard Plan</h3>
                   <div className="space-y-4 text-[#94a3b8]">
                     {["4 washes per month", "Exterior + Interior cleaning", "Premium products", "Priority scheduling"].map(f => (
                       <div key={f} className="flex items-start gap-2"><span className="text-[#0ea5e9] mt-1">✓</span><p>{f}</p></div>
@@ -135,15 +124,15 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-white text-3xl font-bold mb-4">LKR 4,000<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
+                  <p className="text-white text-3xl font-bold mb-4">LKR 9,500<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
                   <button className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-[#0f172a] py-3 rounded-full font-bold transition-all shadow-[0_0_15px_rgba(14,165,233,0.3)]">Subscribe</button>
                 </div>
               </div>
 
-              {/* Elite Plan */}
+              {/* Premium Plan */}
               <div className="sub-display-card w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-white font-bold text-2xl mb-6">Premium</h3>
+                  <h3 className="text-white font-bold text-2xl mb-6">Premium Plan</h3>
                   <div className="space-y-4 text-[#94a3b8]">
                     {["6 washes per month", "All services included", "Premium detailing products", "VIP support", "Free wax treatment"].map(f => (
                       <div key={f} className="flex items-start gap-2"><span className="text-[#0ea5e9] mt-1">✓</span><p>{f}</p></div>
@@ -151,7 +140,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-white text-3xl font-bold mb-4">LKR 6,000<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
+                  <p className="text-white text-3xl font-bold mb-4">LKR 18,000<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
                   <button className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-[#0f172a] py-3 rounded-full font-bold transition-all shadow-[0_0_15px_rgba(14,165,233,0.3)]">Subscribe</button>
                 </div>
               </div>
