@@ -11,16 +11,6 @@
     --text-secondary: #94a3b8;
 }
 
-:root[data-theme="light"] {
-    --background: #f8fafc;
-    --foreground: #0f172a;
-    --primary: #0ea5e9;
-    --background-dark: #f8fafc;
-    --surface-dark: #ffffff;
-    --border-dark: #e2e8f0;
-    --text-secondary: #475569;
-}
-
 @theme {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
@@ -39,30 +29,6 @@ body {
     background: var(--background-dark);
     color: var(--foreground);
     font-family: "Manrope", sans-serif;
-}
-
-[data-theme="light"] body {
-    background: var(--background);
-    color: var(--foreground);
-}
-
-[data-theme="light"] .bg-\[\#0f172a\],
-[data-theme="light"] .bg-\[\#0f172a\]\/95,
-[data-theme="light"] .bg-\[\#1e293b\],
-[data-theme="light"] .bg-\[\#334155\] {
-    background-color: var(--surface-dark) !important;
-}
-
-[data-theme="light"] .text-white {
-    color: #0f172a !important;
-}
-
-[data-theme="light"] .text-\[\#94a3b8\] {
-    color: var(--text-secondary) !important;
-}
-
-[data-theme="light"] .border-\[\#334155\] {
-    border-color: var(--border-dark) !important;
 }
 
 html {
