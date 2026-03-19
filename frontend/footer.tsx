@@ -50,7 +50,7 @@ const Footer = () => {
                 <h4 className="text-white font-bold text-sm uppercase tracking-wider">Contact</h4>
                 <p className="text-[#94a3b8] text-sm">📍 Colombo, Sri Lanka</p>
                 <p className="text-[#94a3b8] text-sm">📞 +94 77 123 4567</p>
-                <p className="text-[#94a3b8] text-sm">📧 support@washxpress.lk</p>
+                <p className="text-[#94a3b8] text-sm">📧 washxpress.lk@gmail.com </p>
                 <div className="flex gap-3 mt-2">
                   <a className="w-8 h-8 rounded-full bg-[#1e293b] flex items-center justify-center text-[#94a3b8] hover:bg-[#0ea5e9] hover:text-[#0f172a] transition-all cursor-pointer" href="https://www.instagram.com/washxpress_lk?igsh=MTE3MGZxOXR1N2k3cA==" target="_blank" rel="noopener noreferrer">
                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
