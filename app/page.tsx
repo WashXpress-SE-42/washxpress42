@@ -127,7 +127,7 @@ export default function Home() {
                   POPULAR
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-2xl mb-6">Premium Plan</h3>
+                  <h3 className="text-white font-bold text-2xl mb-6">Standard</h3>
                   <div className="space-y-4 text-[#94a3b8]">
                     {["4 washes per month", "Exterior + Interior cleaning", "Premium products", "Priority scheduling"].map(f => (
                       <div key={f} className="flex items-start gap-2"><span className="text-[#0ea5e9] mt-1">✓</span><p>{f}</p></div>
@@ -143,7 +143,7 @@ export default function Home() {
               {/* Elite Plan */}
               <div className="sub-display-card w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-white font-bold text-2xl mb-6">Elite Plan</h3>
+                  <h3 className="text-white font-bold text-2xl mb-6">Premium</h3>
                   <div className="space-y-4 text-[#94a3b8]">
                     {["6 washes per month", "All services included", "Premium detailing products", "VIP support", "Free wax treatment"].map(f => (
                       <div key={f} className="flex items-start gap-2"><span className="text-[#0ea5e9] mt-1">✓</span><p>{f}</p></div>

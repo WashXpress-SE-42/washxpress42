@@ -27,7 +27,7 @@ export default function Home() {
                   Showroom Shine, <span className="text-[#0ea5e9]">Right in Your Driveway.</span>
                 </h1>
                 <h2 className="text-[#94a3b8] text-base font-normal leading-relaxed max-w-md">
-                  Sri Lanka's first smart subscription-based car wash service.
+                  Sri Lanka&apos;s first smart subscription-based car wash service.
                 </h2>
               </div>
 
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="flex flex-col max-w-[1200px] flex-1">
             <h2 className="text-white text-3xl font-black mb-6 text-center">ABOUT WashXpress</h2>
             <p className="text-[#94a3b8] text-base leading-relaxed max-w-3xl mx-auto text-center">
-              WashXpress is Sri Lanka's first smart subscription-based car wash service, designed to bring convenience and efficiency to every vehicle owner. Our mission is to save you time while providing high-quality car care using modern technology. With flexible subscription plans and a team of skilled professionals, we ensure your car stays spotless, no matter how busy your schedule.
+              WashXpress is Sri Lanka&apos;s first smart subscription-based car wash service, designed to bring convenience and efficiency to every vehicle owner. Our mission is to save you time while providing high-quality car care using modern technology. With flexible subscription plans and a team of skilled professionals, we ensure your car stays spotless, no matter how busy your schedule.
             </p>
           </div>
         </div>
@@ -111,18 +111,18 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-white text-3xl font-bold mb-4">LKR 2,500<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
+                  <p className="text-white text-3xl font-bold mb-4">LKR 5,500<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
                   <button className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-[#0f172a] py-3 rounded-full font-bold transition-all shadow-[0_0_15px_rgba(14,165,233,0.3)]">Subscribe</button>
                 </div>
               </div>
 
-              {/* Premium Plan - Featured */}
+              {/* Standard Plan - Featured */}
               <div className="sub-display-card popular-highlight w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-gradient-to-br from-[#0ea5e9]/20 to-[#1e293b] border-2 border-[#0ea5e9] rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden">
                 <div className="absolute top-4 right-4 bg-[#0ea5e9] text-[#0f172a] px-3 py-1 rounded-full text-xs font-bold">
                   POPULAR
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-2xl mb-6">Premium Plan</h3>
+                  <h3 className="text-white font-bold text-2xl mb-6">Standard Plan</h3>
                   <div className="space-y-4 text-[#94a3b8]">
                     {["4 washes per month", "Exterior + Interior cleaning", "Premium products", "Priority scheduling"].map(f => (
                       <div key={f} className="flex items-start gap-2"><span className="text-[#0ea5e9] mt-1">✓</span><p>{f}</p></div>
@@ -130,15 +130,15 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-white text-3xl font-bold mb-4">LKR 4,000<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
+                  <p className="text-white text-3xl font-bold mb-4">LKR 9,500<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
                   <button className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-[#0f172a] py-3 rounded-full font-bold transition-all shadow-[0_0_15px_rgba(14,165,233,0.3)]">Subscribe</button>
                 </div>
               </div>
 
-              {/* Elite Plan */}
+              {/* Premium Plan */}
               <div className="sub-display-card w-full max-w-[400px] md:max-w-[300px] h-auto min-h-[420px] md:h-[500px] bg-[#1e293b] rounded-2xl p-6 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-white font-bold text-2xl mb-6">Elite Plan</h3>
+                  <h3 className="text-white font-bold text-2xl mb-6">Premium Plan</h3>
                   <div className="space-y-4 text-[#94a3b8]">
                     {["6 washes per month", "All services included", "Premium detailing products", "VIP support", "Free wax treatment"].map(f => (
                       <div key={f} className="flex items-start gap-2"><span className="text-[#0ea5e9] mt-1">✓</span><p>{f}</p></div>
@@ -146,7 +146,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-white text-3xl font-bold mb-4">LKR 6,000<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
+                  <p className="text-white text-3xl font-bold mb-4">LKR 18,000<span className="text-[#94a3b8] text-sm font-normal">/month</span></p>
                   <button className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-[#0f172a] py-3 rounded-full font-bold transition-all shadow-[0_0_15px_rgba(14,165,233,0.3)]">Subscribe</button>
                 </div>
               </div>
