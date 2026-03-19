@@ -3,7 +3,7 @@ const teamMembers = [
   { name: "Nidula Ekanayake", role: "Full-Stack Developer" },
   { name: "Yasiru Anupama", role: "Full-Stack Developer" },
   { name: "Kavindu Banuja", role: "Front-end Developer" },
-  { name: "Chathil Karunathilake", role: "Front-end Developer" },
+  { name: "Chathil Karunarathne", role: "Front-end Developer" },
   { name: "Bimsara Rathnayake", role: "Full-Stack Developer" },
 ];
 
