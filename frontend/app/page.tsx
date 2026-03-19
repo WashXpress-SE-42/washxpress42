@@ -33,17 +33,6 @@ export default function Home() {
 
               {/* ── Location search with district dropdown ── */}
               <LocationSearch />
-              <div className="flex gap-4 items-center mt-2">
-                <div className="flex -space-x-3">
-                  <div className="size-8 rounded-full border-2 border-[#0f172a] bg-gray-500"></div>
-                  <div className="size-8 rounded-full border-2 border-[#0f172a] bg-gray-400"></div>
-                  <div className="size-8 rounded-full border-2 border-[#0f172a] bg-gray-600"></div>
-                  <div className="size-8 rounded-full border-2 border-[#0f172a] bg-[#1e293b] flex items-center justify-center text-[10px] text-white font-bold">
-                    +500
-                  </div>
-                </div>
-                <p className="text-sm text-[#94a3b8]">Trusted by 500+ car owners in Sri Lanka</p>
-              </div>
             </div>
 
             <div className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-2xl md:h-auto md:min-w-[400px] md:w-full order-1 md:order-2 shadow-2xl border border-[#334155] relative overflow-hidden group hero-back">
