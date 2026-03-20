@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const teamMembers = [
   { name: "Lahiru Indrajith", role: "Full-Stack Developer", image: "/lahiru.jpg" },
   { name: "Nidula Ekanayake", role: "Full-Stack Developer", image: "/nidula.jpg" },
@@ -37,7 +39,7 @@ export default function TeamSection() {
                   >
                     {/* Avatar */}
                     <div className="w-40 h-40 rounded-2xl overflow-hidden mb-4 border border-[#334155] group-hover:border-[#0ea5e9] transition-colors bg-[#1e293b] flex items-center justify-center">
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                      <Image src={member.image} alt={member.name} width={160} height={160} className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-white font-bold text-xl">{member.name}</h3>
                     <p className="text-[#0ea5e9] text-sm font-medium mt-1">{member.role}</p>
