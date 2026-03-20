@@ -1,10 +1,10 @@
 const teamMembers = [
-  { name: "Lahiru Indrajith", role: "Full-Stack Developer" },
-  { name: "Nidula Ekanayake", role: "Full-Stack Developer" },
-  { name: "Yasiru Anupama", role: "Full-Stack Developer" },
-  { name: "Kavindu Banuja", role: "Front-end Developer" },
-  { name: "Chathil Karunarathne", role: "Front-end Developer" },
-  { name: "Bimsara Rathnayake", role: "Full-Stack Developer" },
+  { name: "Lahiru Indrajith", role: "Full-Stack Developer", image: "/lahiru.jpg" },
+  { name: "Nidula Ekanayake", role: "Full-Stack Developer", image: "/nidula.jpg" },
+  { name: "Yasiru Anupama", role: "Full-Stack Developer", image: "/yasiru.png" },
+  { name: "Kavindu Banuja", role: "Front-end Developer", image: "/banuja.jpg" },
+  { name: "Chathil Karunarathne", role: "Front-end Developer", image: "/chathil.jpeg" },
+  { name: "Bimsara Rathnayake", role: "Full-Stack Developer", image: "/bimsara.jpg" },
 ];
 
 export default function TeamSection() {
@@ -35,11 +35,9 @@ export default function TeamSection() {
                     key={i}
                     className="flex flex-col items-center text-center group w-full max-w-[260px]"
                   >
-                    {/* Avatar placeholder */}
+                    {/* Avatar */}
                     <div className="w-40 h-40 rounded-2xl overflow-hidden mb-4 border border-[#334155] group-hover:border-[#0ea5e9] transition-colors bg-[#1e293b] flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[#94a3b8] text-6xl">
-                        person
-                      </span>
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-white font-bold text-xl">{member.name}</h3>
                     <p className="text-[#0ea5e9] text-sm font-medium mt-1">{member.role}</p>
