@@ -31,56 +31,56 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="team-scroll-container">
-      <div className="sticky top-0 h-screen flex flex-col justify-center items-center overflow-hidden">
-        <div className="flex justify-center px-4 md:px-10 w-full">
-          <div className="flex flex-col max-w-[1200px] flex-1">
-            {/* Header */}
-            <div className="text-center mb-12">
-              <span className="text-[#0ea5e9] font-bold tracking-wider text-sm uppercase">
-                Our Experts
-              </span>
-              <h2 className="text-white text-3xl font-black leading-tight mt-2">
-                MEET THE TEAM
-              </h2>
-              <p className="text-[#94a3b8] mt-2">
-                The passionate people behind your vehicle&apos;s showroom shine.
-              </p>
-            </div>
+    <section id="team" className="py-24 bg-slate-50 dark:bg-slate-950">
+      <div className="flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col w-full max-w-[1200px]">
+          {/* Header */}
+          <div className="text-center mb-12 px-4 md:px-10">
+            <span className="text-sky-500 font-bold tracking-wider text-sm uppercase">
+              Our Experts
+            </span>
+            <h2 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight mt-2">
+              MEET THE TEAM
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 mt-4 max-w-2xl mx-auto">
+              The passionate people behind your vehicle&apos;s showroom shine.
+            </p>
+          </div>
 
-            {/* Scrolling Cards */}
-            <div className="relative w-full max-h-[420px] overflow-y-auto team-mask">
-              <div className="flex flex-col items-center gap-10 py-10 team-scroll-inner">
-                {teamMembers.map((member, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col items-center text-center group w-full max-w-[260px]"
-                  >
-                    {/* Avatar placeholder */}
-                    <div className="w-40 h-40 rounded-2xl overflow-hidden mb-4 border border-[#334155] group-hover:border-[#0ea5e9] transition-colors bg-[#1e293b] flex items-center justify-center relative">
-                      {member.image ? (
-                        <Image
-                          src={member.image}
-                          alt={member.name}
-                          fill
-                          className="object-cover"
-                        />
-                      ) : (
-                        <span className="material-symbols-outlined text-[#94a3b8] text-6xl">
-                          person
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="text-white font-bold text-xl">
-                      {member.name}
-                    </h3>
-                    <p className="text-[#0ea5e9] text-sm font-medium mt-1">
-                      {member.role}
-                    </p>
+          {/* Scrolling Cards */}
+          <div 
+            className="w-full flex lg:justify-between overflow-x-auto snap-x snap-mandatory gap-4 lg:gap-4 xl:gap-6 px-4 md:px-10 pb-12 pt-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] items-stretch"
+          >
+            {teamMembers.map((member, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 lg:flex-1 snap-center flex flex-col items-center justify-between text-center group w-[260px] lg:w-[160px] xl:w-[180px] h-[320px] lg:h-[280px] xl:h-[300px] bg-white dark:bg-slate-900 p-6 lg:p-4 xl:p-6 rounded-3xl border border-slate-200 dark:border-slate-800 hover:border-sky-500 dark:hover:border-sky-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:hover:shadow-sky-500/10"
+              >
+                <div className="flex flex-col items-center w-full">
+                  {/* Avatar placeholder */}
+                  <div className="w-32 h-32 lg:w-20 lg:h-20 xl:w-24 xl:h-24 rounded-full overflow-hidden mb-5 lg:mb-4 xl:mb-6 border-4 border-slate-50 dark:border-slate-800 group-hover:border-sky-500/30 transition-colors bg-slate-100 dark:bg-slate-800 flex items-center justify-center relative">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <span className="material-symbols-outlined text-slate-400 dark:text-slate-500 text-5xl lg:text-3xl xl:text-4xl">
+                        person
+                      </span>
+                    )}
                   </div>
-                ))}
+                  <h3 className="text-slate-900 dark:text-white font-bold text-xl lg:text-sm xl:text-base whitespace-nowrap overflow-hidden text-ellipsis w-full">
+                    {member.name}
+                  </h3>
+                  <p className="text-sky-500 text-sm xl:text-sm lg:text-[11px] font-semibold mt-2 lg:mt-1 xl:mt-2">
+                    {member.role}
+                  </p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
