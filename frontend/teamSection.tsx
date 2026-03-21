@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const teamMembers = [
   { name: "Lahiru Indrajith", role: "Full-Stack Developer", image: "/lahiru.jpg" },
-  { name: "Nidula Ekanayake", role: "Full-Stack Developer", image: "/nidula.jpg" },
+  { name: "Nidula Ekanayake", role: "Full-Stack Developer", image: "/" },
   { name: "Yasiru Anupama", role: "Full-Stack Developer", image: "/yasiru.png" },
   { name: "Kavindu Banuja", role: "Front-end Developer", image: "/banuja.jpg" },
   { name: "Chathil Karunarathne", role: "Front-end Developer", image: "/chathil.jpeg" },
