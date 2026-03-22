@@ -16,7 +16,7 @@ const teamMembers = [
     role: "Full-Stack Developer",
     image: "/yasiru.png",
   },
-  { name: "Kavindu Banuja", role: "Front-end Developer", image: "/banuja.jpg" },
+  { name: "Kavindu Banuja", role: "Front-end Developer", image: "/banujanew.jpeg" },
   {
     name: "Chathil Karunarathne",
     role: "Front-end Developer",

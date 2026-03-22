@@ -4,7 +4,7 @@ const teamMembers = [
   { name: "Lahiru Indrajith", role: "Full-Stack Developer", image: "/lahiru.jpg" },
   { name: "Nidula Ekanayake", role: "Full-Stack Developer", image: "/nidula.jpg?v=1" },
   { name: "Yasiru Anupama", role: "Full-Stack Developer", image: "/yasiru.png" },
-  { name: "Kavindu Banuja", role: "Front-end Developer", image: "/banuja.jpg" },
+  { name: "Kavindu Banuja", role: "Front-end Developer", image: "/banujanew.jpeg" },
   { name: "Chathil Karunarathne", role: "Front-end Developer", image: "/chathil.jpeg" },
   { name: "Bimsara Rathnayake", role: "Full-Stack Developer", image: "/bimsara.jpg" },
 ];
