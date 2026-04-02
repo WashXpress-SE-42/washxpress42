@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -25,12 +24,9 @@ export default function NavBar() {
       <div className="px-4 md:px-10 py-3 max-w-[1200px] mx-auto">
         <header className="flex items-center justify-between whitespace-nowrap">
           <Link href="/">
-            <Image
+            <img
               src="/WashXpress_logo.svg"
               alt="WashXpress"
-              width={200}
-              height={50}
-              priority
               className="h-9 w-auto"
             />
           </Link>

@@ -11,6 +11,9 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "WashXpress - Sri Lanka's Smart Car Wash Service",
   description: "Sri Lanka's first smart subscription-based car wash service. Eco-friendly, on-demand, and convenient.",
+  icons: {
+    icon: "/icon-copy.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -4,6 +4,7 @@ import NavBar from "./navBar";
 import TeamSection from "./teamSection";
 import HowItWorks from "./popup";
 import LocationSearch from "./LocationSearch";
+import MarketingVideo from "./MarketingVideo";
 import Link from "next/link";
 
 export default function Home() {
@@ -148,6 +149,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Marketing Video Section */}
+      <MarketingVideo />
 
       {/* Meet the Team */}
       <TeamSection />
